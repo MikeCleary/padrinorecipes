@@ -1,0 +1,10 @@
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li class="recipe_list_item">
+      <img class="recipe_thumb" src=<%=recipe.img_url%>>
+      <h2 class="recipe_title"><%= recipe.title %></h2>
+      <p class="recipe_description"><%= recipe.description %></p>
+      <%= link_to "See more...", url_for(:recipes, :show, :id => recipe.id) %>
+    </li>
+  <% end %>
+</ul>

@@ -2,10 +2,20 @@ PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
 require "test/unit"
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :transaction
 
 class Test::Unit::TestCase
   include Rack::Test::Methods
 
+  def setup
+    DatabaseCleaner.start
+  end
+
+  def teardown
+    DatabaseCleaner.clean
+  end
   # You can use this method to custom specify a Rack app
   # you want rack-test to invoke:
   #

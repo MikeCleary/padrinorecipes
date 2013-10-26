@@ -1,0 +1,66 @@
+
+/*=============SHOW PAGE==============*/
+.recipe_pic {
+  width: 300px;
+  margin: 15px;
+}
+
+/*======================FORM==============*/
+
+.hidden_field {
+  display: none;
+}
+
+/*==============LAYOUT=====================*/
+
+body {
+  background-color: #F6F2DD;
+}
+#main {
+  width: 900px;
+  margin: auto;
+}
+
+#main_logo {
+  background-color: #CF0000;
+  color: white;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 0 12px 0;
+  font-size: 32px;
+}
+
+nav li {
+  display: inline-block;
+}
+
+.nav_item {
+  background-color: #CF0000;
+  color: white;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 10px;
+  width: 92px;
+  text-align: center;
+}
+
+.nav_item a{
+  color: white;
+  text-decoration: none;
+}
+
+.nav_item a:visited{
+  color: white;
+}
+/*===============INDEX PAGE========================*/
+.recipe_thumb {
+  width: 300px;
+  margin: 0 10px 10px 10px;
+  float: left;
+}
+
+.recipe_list_item {
+  clear: both;
+  list-style-type: none;
+}

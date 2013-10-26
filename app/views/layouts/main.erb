@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag 'main' %>
+  <title></title>
+</head>
+<body>
+  <header>
+  <h1 id="main_logo">Things Other People Eat</h1>
+    <nav>
+      <ul>
+        <li class="nav_item">
+          <%= link_to "Home", url_for(:recipes, :index) %>
+        </li>
+        <li class="nav_item">
+          <%= link_to "Latest", url_for(:recipes, :index) %>
+        </li>
+        <li class="nav_item">
+          <%= link_to "Add", url_for(:recipes, :index) %>
+        </li>
+        <li class="nav_item">
+          <%= link_to "Chefs", url_for(:recipes, :index) %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div id="main">
+    <%= yield %>
+  </div>
+  <div id="chefs">
+    
+  </div>
+</body>
+</html>
