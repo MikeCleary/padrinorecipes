@@ -1,27 +1,30 @@
 <dl class="recipe_form">
 
-  <dt><%= f.label :title %></dt>
+  <dt class="subheading"><%= f.label :title %></dt>
   <dd><%= f.text_field :title %></dd>
 
-  <dt><%= f.label :decription %></dt>
+  <dt class="subheading"><%= f.label :decription %></dt>
   <dd><%= f.text_area :description %></dd>
 
-  <dt><%= f.label :prep_time %></dt>
+  <dt class="subheading"><%= f.label :prep_time %></dt>
   <dd><%= f.text_field :prep_time %></dd>
 
-  <dt><%= f.label :cook_time %></dt>
+  <dt class="subheading"><%= f.label :cook_time %></dt>
   <dd><%= f.text_field :cook_time %></dd>
 
-  <dt><%= f.label :serves %></dt>
+  <dt class="subheading"><%= f.label :serves %></dt>
   <dd><%= f.text_field :serves %></dd>
 
-  <dt><%= f.label :image %></dt>
+  <dt class="subheading"><%= f.label :image %></dt>
   <dd><%= f.text_field :img_url %></dd>
+
+  <dt class="subheading"><%= f.label :choose_tags %></dt>
+  <dd><%= f.select :tag_ids, :options => @tags, :multiple => true %></dd>
 
   <% count = 0 %>
   <% f.fields_for :ingredients do |i| %>
     <div class=<%= count < 1 ? '' : 'hidden_field' %> >
-      <dt><%= i.label :ingredient %></dt>
+      <dt class="subheading"><%= i.label :ingredient %></dt>
       <dd>
         <%=i.text_field :ingredient %>
         <a href="javascript:" onClick="unhideFields(this)">Add Ingredient</a>
@@ -29,15 +32,15 @@
     </div>
     <% count += 1 %>
   <% end %>
-  <% other_count = 1 %>
+  <% step_count = 1 %>
   <% f.fields_for :steps do |s| %>
-    <div class=<%= other_count < 2 ? '' : 'hidden_field' %> >
-      <dt ><%= s.label "Step #{other_count}" %></dt>
+    <div class=<%= step_count < 2 ? '' : 'hidden_field' %> >
+      <dt class="subheading"><%= s.label "Step #{step_count}" %></dt>
       <dd>
-        <%= s.text_field :steps %>
+        <%= s.text_field :step %>
         <a href="javascript:" onClick="unhideFields(this)">Add Ingredient</a>
       </dd>
     </div>
-    <% other_count += 1 %>
+    <% step_count += 1 %>
   <% end %>
 </dl>

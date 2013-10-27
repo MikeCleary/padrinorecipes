@@ -25,6 +25,11 @@ Step.destroy_all
   :img_url => "http://i.dailymail.co.uk/i/pix/2009/02/26/article-1156002-03AB48D5000005DC-197_468x670.jpg"
   )
 
+@tag1 = Tag.create(:name => "Vegetarian")
+@tag2 = Tag.create(:name => "Vegen")
+@tag3 = Tag.create(:name => "Sausages")
+@tag4 = Tag.create(:name => "Chips")
+
 2.times do 
   recipe = Recipe.new(
     :title => "Beans on Toast",
@@ -39,6 +44,7 @@ Step.destroy_all
     recipe.ingredients << Ingredient.new(:ingredient => Faker::Lorem.words(10).join(" "))
     recipe.steps << Step.new(:step => Faker::Lorem.words(10).join(" "))
   end
+  recipe.tags << @tag1
   recipe.save
 end
 
@@ -56,6 +62,7 @@ end
     recipe.ingredients << Ingredient.new(:ingredient => Faker::Lorem.words(10).join(" "))
     recipe.steps << Step.new(:step => Faker::Lorem.words(10).join(" "))
   end
+  recipe.tags << @tag3
   recipe.save
 end
 
@@ -73,5 +80,6 @@ end
     recipe.ingredients << Ingredient.new(:ingredient => Faker::Lorem.words(10).join(" "))
     recipe.steps << Step.new(:step => Faker::Lorem.words(10).join(" "))
   end
+  recipe.tags << @tag4
   recipe.save
 end

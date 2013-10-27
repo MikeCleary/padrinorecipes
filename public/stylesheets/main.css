@@ -60,6 +60,8 @@ body {
 
 #main {
   margin-left: 60px;
+  width: 900px;
+  float: left;
 }
 
 #main_logo {
@@ -211,3 +213,29 @@ nav li {
 .hidden_field {
   display: none;
 }
+
+/*=================TAG LIST PARTIAL==========*/
+.tag_list {
+  width: 250px;
+  margin-right: 60px;
+  padding: 12px;
+  background-color: white;
+  float: right;
+}
+
+.tag_list a {
+  text-decoration: none;
+  color: #8D8686;
+}
+
+/*=============================FORMS==============*/
+
+dd {
+  margin-bottom: 18px;
+}
+
+
+.tag_list_item {
+  margin-bottom: 8px;
+}
+
