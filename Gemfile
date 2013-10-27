@@ -27,6 +27,7 @@ gem 'padrino', '0.11.4'
 
 gem 'pry'
 gem 'database_cleaner'
+gem 'faker'
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 

@@ -1,0 +1,4 @@
+<% form_for @recipe, url_for(:recipes, :update, :id => @recipe.id), :method => "PUT" %>
+  <%= partial '/recipes/form', :locals => {:f => f} %>
+  <%= f.submit, :value => "Apply Changes" %>
+<% end %>

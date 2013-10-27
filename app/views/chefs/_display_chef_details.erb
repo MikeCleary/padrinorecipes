@@ -1,0 +1,11 @@
+<ul class="chef_index">
+  <li class="chef_index_item">
+    <h2><%= "#{chef.first_name} #{chef.last_name}" %></h2>
+    <% if chef.michelin %>
+      <p class="michlelin_rating">Michelin rating: <%= chef.michelin %> </p>
+    <% end %>
+    <% if chef.website %>
+      <p class="chefs_url"><a href=<%= chef.website %>><%= "#{chef.first_name}'s own website"%></a></p>
+    <% end %>
+  </li>
+</ul>

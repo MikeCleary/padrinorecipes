@@ -1,0 +1,4 @@
+<% form_for @chef, url_for(:chefs, :create) do |f| %>
+  <%= partial 'chefs/form', :locals => {:f => f} %>
+  <%= f.submit %>
+<% end %>

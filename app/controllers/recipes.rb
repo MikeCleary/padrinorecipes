@@ -7,7 +7,7 @@ PadrinoRecipes::App.controllers :recipes do
     render 'recipes/index'
   end
 
-  get :new, :parent => :author do
+  get :new, :parent => :chefs do
     @recipe = Recipe.new
     10.times {@recipe.ingredients << Ingredient.new}
     10.times {@recipe.steps << Step.new}

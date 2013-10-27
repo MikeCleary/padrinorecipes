@@ -15,7 +15,7 @@
 
 <h3 class="subheading">Method</h3>
 <ul class="recipe_steps">
-  <% @recipe.steps.each do |step| %>
-    <li class="step"><%= step %></li>
+  <% @recipe.steps.each_with_index do |step, index| %>
+    <li class="step"><span class="recipe_step_index"><%= "#{index + 1}" %></span> <%=step.step %></li>
   <% end %>
 </ul>
