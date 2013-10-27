@@ -7,19 +7,22 @@ Step.destroy_all
     :first_name => "Gordon",
     :last_name => "Ramsey",
     :michelin => 16,
-    :website => "www.gordonswearsatfood.com"
+    :website => "www.gordonswearsatfood.com",
+    :img_url => "http://latimesblogs.latimes.com/photos/uncategorized/2008/04/30/gordon_ramsay_headshot.jpg"
   )
 
 @nigella = Chef.create(
   :first_name => "Nigella",
   :last_name => "Lawson",
-  :website => "www.nigellapoutsatfood.com"
+  :website => "www.nigellapoutsatfood.com",
+  :img_url => "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTwX8ndO7tkBwSjk5hRjUT5V8zbtcZvZBE9eGfwwcPQQIlsWNijWQ"
   )
 
 @heston = Chef.create(
   :first_name => "Heston",
   :last_name => "Blumenthal",
-  :michelin => 3
+  :michelin => 3,
+  :img_url => "http://i.dailymail.co.uk/i/pix/2009/02/26/article-1156002-03AB48D5000005DC-197_468x670.jpg"
   )
 
 2.times do 

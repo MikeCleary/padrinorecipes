@@ -1,15 +1,4 @@
 
-/*=============SHOW PAGE==============*/
-.recipe_pic {
-  width: 300px;
-  margin: 15px;
-}
-
-/*======================FORM==============*/
-
-.hidden_field {
-  display: none;
-}
 
 /*==============LAYOUT=====================*/
 
@@ -53,7 +42,7 @@ nav li {
 .nav_item a:visited{
   color: white;
 }
-/*===============INDEX PAGE========================*/
+/*===============RECIPE INDEX========================*/
 .recipe_thumb {
   width: 300px;
   margin: 0 10px 10px 10px;
@@ -63,4 +52,39 @@ nav li {
 .recipe_list_item {
   clear: both;
   list-style-type: none;
+}
+/*=============SHOW RECIPE==============*/
+.recipe_pic {
+  width: 300px;
+  margin: 15px;
+}
+
+/*===============SHOW CHEF==============*/
+.chef_pic {
+  float: left;
+  width: 200px;
+}
+
+.chef_list_item {
+  clear: both;
+}
+
+.add_recipe_link {
+  clear:both;
+}
+
+/*===============CHEF INDEX=============*/
+.chefs_url {
+  display: inline-block;
+  float: left;
+}
+
+.chef_link {
+  display: inline-block;
+}
+
+/*=================RECIPE FORM==============*/
+
+.hidden_field {
+  display: none;
 }

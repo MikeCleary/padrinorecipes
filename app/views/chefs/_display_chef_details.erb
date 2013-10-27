@@ -1,11 +1,12 @@
-<ul class="chef_index">
-  <li class="chef_index_item">
+<ul class="chef_list">
+  <li class="chef_list_item">
+    <img class="chef_pic" src=<%= chef.img_url %>>
     <h2><%= "#{chef.first_name} #{chef.last_name}" %></h2>
     <% if chef.michelin %>
-      <p class="michlelin_rating">Michelin rating: <%= chef.michelin %> </p>
+      <p class="michelin_rating">Michelin rating: <%= chef.michelin %> </p>
     <% end %>
     <% if chef.website %>
-      <p class="chefs_url"><a href=<%= chef.website %>><%= "#{chef.first_name}'s own website"%></a></p>
+      <div class="chefs_url nav_item"><a href=<%= chef.website %>><%= "Website"%></a></div>
     <% end %>
   </li>
 </ul>
