@@ -2,5 +2,7 @@
   <img class="recipe_thumb" src=<%=recipe.img_url%>>
   <h2 class="recipe_title"><%= recipe.title %></h2>
   <p class="recipe_description"><%= recipe.description %></p>
-  <%= link_to "See more...", url_for(:recipes, :show, :id => recipe.id) %>
+<div class="nav_item recipe_link">
+  <%= link_to "More", url_for(:recipes, :show, :id => recipe.id) %>
+</div>
 </li>

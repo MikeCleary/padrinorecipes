@@ -1,8 +1,9 @@
-
-<%= partial '/chefs/display_chef_details', :locals => {:chef => @chef} %>
-<% @chef.recipes.each do |recipe| %>
-  <%= partial '/recipes/recipe_list_display', :locals => {:recipe => recipe} %>
-<% end %>
-<div class="add_recipe_link nav_item">
-  <%= link_to "Add Recipe", url_for(:recipes, :new, :chef_id => @chef.id  ) %>
+<div class="show_chef_page">
+  <%= partial '/chefs/display_chef_details', :locals => {:chef => @chef} %>
+  <% @chef.recipes.each do |recipe| %>
+    <%= partial '/recipes/recipe_list_display', :locals => {:recipe => recipe} %>
+  <% end %>
+  <div class="add_recipe_link nav_item">
+    <%= link_to "Add Recipe", url_for(:recipes, :new, :chef_id => @chef.id  ) %>
+  </div>
 </div>

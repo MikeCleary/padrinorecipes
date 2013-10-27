@@ -1,23 +1,82 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*=========================END OF RESET==================*/
+
 
 
 /*==============LAYOUT=====================*/
 
 body {
   background-color: #F6F2DD;
+  font-family: tahoma, Geneva, sans-serif;
 }
+
 #main {
-  width: 900px;
-  margin: auto;
+  margin-left: 60px;
 }
 
 #main_logo {
+  font-family: Verdana;
   background-color: #CF0000;
   color: white;
-  font-family: Verdana;
   font-weight: bold;
-  padding: 10px;
-  margin: 0 0 12px 0;
-  font-size: 32px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  margin-right: 60px;
+  margin-left: 60px;
+  font-size: 42px;
+}
+
+nav ul {
+ margin: 0 0 16px 60px; 
 }
 
 nav li {
@@ -45,25 +104,78 @@ nav li {
 /*===============RECIPE INDEX========================*/
 .recipe_thumb {
   width: 300px;
-  margin: 0 10px 10px 10px;
+  height: 210px;
+  margin-right: 15px;
   float: left;
 }
 
 .recipe_list_item {
+  font-family: tahoma, Geneva, sans-serif;
   clear: both;
   list-style-type: none;
+  height: 210px;
+  width: 900px;
+  margin-bottom: 16px;
+}
+
+.recipe_title {
+  font-family: tahoma, Geneva, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.recipe_description {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-family: tahoma, Geneva, sans-serif;  
+}
+
+.recipe_link {
+  float: left;
 }
 /*=============SHOW RECIPE==============*/
+.recipe_show_page {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.recipe_show_page ul {
+  margin-bottom: 22px;
+}
+
 .recipe_pic {
-  width: 300px;
-  margin: 15px;
+  width: 400px;
+  margin-right: 18px;
+  margin-bottom: 16px;
+  float: left;
+}
+
+.subheading {
+  font-family: tahoma, Geneva, sans-serif;
+  clear: both;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 18px; 
+}
+
+.time {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.ingredient, .step {
+  font-family: tahoma, Geneva, sans-serif;
+  margin-bottom: 14px;
+}
+
+.recipe_step_index {
+  font-weight: bold;
 }
 
 /*===============SHOW CHEF==============*/
-.chef_pic {
-  float: left;
-  width: 200px;
-}
+
 
 .chef_list_item {
   clear: both;
@@ -74,13 +186,24 @@ nav li {
 }
 
 /*===============CHEF INDEX=============*/
+.chef_list_item {
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.chef_pic {
+  margin-right: 18px;
+  float: left;
+  height: 200px;
+}
+
 .chefs_url {
   display: inline-block;
   float: left;
 }
 
 .chef_link {
-  display: inline-block;
+
 }
 
 /*=================RECIPE FORM==============*/

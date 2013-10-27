@@ -16,6 +16,7 @@ PadrinoRecipes::App.controllers :recipes do
 
   get :show, :with => :id do
     @recipe = Recipe.find(params[:id])
+    @comment = Comment.new(:recipe => @recipe)
     render 'recipes/show'
   end
 

@@ -1,21 +1,28 @@
-<h2 class="recipe_title"><%= @recipe.title %></h2>
+<div class="recipe_show_page">
+  <img class="recipe_pic" src=<%= "#{@recipe.img_url}" %>>
 
-<img class="recipe_pic" src=<%= "#{@recipe.img_url}" %>>
+  <h2 class="recipe_title"><%= @recipe.title %></h2>
+  <p class="recipe_description"><%= @recipe.description %></p>
+  <p class="time">Preperation time: <%= @recipe.prep_time %> minutes</p>
+  <p class="time">Cooking time: <%= @recipe.cook_time %> minutes</p>
 
-<p><%= @recipe.description %></p>
-<p>Preperation time: <%= @recipe.prep_time %></p>
-<p>Cooking time: <%= @recipe.cook_time %></p>
+  <h3 class="subheading">Ingredients</h3>
+  <ul class="recipe_ingredients">
+    <% @recipe.ingredients.each do |ingredient| %>
+      <li class="ingredient"><%= ingredient.ingredient %></li>
+    <% end %>
+  </ul>
 
-<h3 class="subheading">Ingredients</h3>
-<ul class="recipe_ingredients">
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li class="ingredient"><%= ingredient.ingredient %></li>
+  <h3 class="subheading">Method</h3>
+  <ul class="recipe_steps">
+    <% @recipe.steps.each_with_index do |step, index| %>
+      <li class="step"><span class="recipe_step_index"><%= "#{index + 1}." %></span> <%=step.step %></li>
+    <% end %>
+  </ul>
+</div>
+<%= partial 'comments/form'%>
+<div class="comments">
+  <% @recipe.comments.each do |comment| %>
+    <p><%=comment.content%></p>
   <% end %>
-</ul>
-
-<h3 class="subheading">Method</h3>
-<ul class="recipe_steps">
-  <% @recipe.steps.each_with_index do |step, index| %>
-    <li class="step"><span class="recipe_step_index"><%= "#{index + 1}" %></span> <%=step.step %></li>
-  <% end %>
-</ul>
+</div>
