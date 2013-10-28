@@ -120,7 +120,7 @@ nav li {
   margin-bottom: 16px;
 }
 
-.recipe_title {
+.title {
   font-family: tahoma, Geneva, sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -176,6 +176,27 @@ nav li {
   font-weight: bold;
 }
 
+.comment {
+  background-color: white;
+  border: 1px grey solid;
+  padding: 10px;
+  border-radius: 3px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.comments_form {
+  margin-bottom: 18px;
+}
+
+.comments_form textarea {
+  font-family: Arial;
+  font-size: 18px;
+  padding: 5px;
+}
+
 /*===============SHOW CHEF==============*/
 
 
@@ -199,12 +220,13 @@ nav li {
   height: 200px;
 }
 
-.chefs_url {
+.chefs_url a, a:visited {
+  text-decoration: none;
+  color: #8D8686;
   display: inline-block;
-  float: left;
 }
 
-.chef_link {
+.chef_link  {
 
 }
 

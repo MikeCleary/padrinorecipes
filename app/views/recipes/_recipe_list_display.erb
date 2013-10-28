@@ -1,8 +1,8 @@
 <li class="recipe_list_item">
   <img class="recipe_thumb" src=<%=recipe.img_url%>>
-  <h2 class="recipe_title"><%= recipe.title %></h2>
+  <h2 class="title"><%= recipe.title %></h2>
   <p class="recipe_description"><%= recipe.description %></p>
-<div class="nav_item recipe_link">
-  <%= link_to "More", url_for(:recipes, :show, :id => recipe.id) %>
-</div>
+  <div class="nav_item recipe_link">
+    <%= link_to "More", url_for(:recipes, :show, :id => recipe.id) %>
+  </div>
 </li>

@@ -1,7 +1,6 @@
-<% tags = Tag.all %>
 <ul class="tag_list">
   <h3 class="subheading" >Search By Tag:</h3>
-  <% tags.each do |tag| %>
+  <% @tags.each do |tag| %>
     <li class="tag_list_item">
       <%= link_to tag.name, url_for(:recipes, :tagged, :tag => tag.name) %>
     </li>

@@ -1,6 +1,3 @@
 <% @chefs.each do |chef| %>
   <%= partial '/chefs/display_chef_details', :locals => {:chef => chef} %>
-  <div class="nav_item chef_link">
-    <%= link_to 'More', url_for(:chefs, :show, :id => chef.id) %>
-  </div>
 <% end %>

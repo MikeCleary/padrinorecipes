@@ -5,6 +5,7 @@ PadrinoRecipes::App.controllers :comments do
   end
 
   post :create do
+    binding.pry
     @comment = Comment.new(params[:comment])
     @comment.save
     redirect to url_for(:recipes, :show, :id => params[:comment][:recipe_id])

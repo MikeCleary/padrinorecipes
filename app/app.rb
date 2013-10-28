@@ -7,6 +7,9 @@ module PadrinoRecipes
 
     enable :sessions
 
+    before do
+      @tags = Tag.all
+    end
     ##
     # Caching support.
     #

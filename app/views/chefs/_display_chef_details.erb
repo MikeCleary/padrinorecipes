@@ -1,12 +1,15 @@
 <ul class="chef_list">
   <li class="chef_list_item">
     <img class="chef_pic" src=<%= chef.img_url %>>
-    <h2><%= "#{chef.first_name} #{chef.last_name}" %></h2>
+    <h2 class="title"><%= "#{chef.first_name} #{chef.last_name}" %></h2>
     <% if chef.michelin %>
       <p class="michelin_rating">Michelin rating: <%= chef.michelin %> </p>
     <% end %>
     <% if chef.website %>
-      <div class="chefs_url nav_item"><a href=<%= chef.website %>><%= "Website"%></a></div>
+      <div class="chefs_url"><a href=<%= chef.website %>>Website</a></div>
     <% end %>
+    <div class="nav_item chef_link">
+      <%= link_to 'More', url_for(:chefs, :show, :id => chef.id) %>
+    </div>
   </li>
 </ul>
