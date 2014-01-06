@@ -12,7 +12,7 @@ class RecipesControllerTest < Test::Unit::TestCase
             :title => "Bangers and mash",
             :description => 'yummy', 
             :cook_time => 30,
-            :prep_time => gi90,
+            :prep_time => 90,
             :serves => 4
             }
           }
